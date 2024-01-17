@@ -5,6 +5,8 @@ import dotenv
 import os
 # import requests
 
+dotenv.load_dotenv()
+
 twilio_number = os.environ.get("TWILIO_NUMBER")
 my_number = os.environ.get("MY_NUMBER")
 

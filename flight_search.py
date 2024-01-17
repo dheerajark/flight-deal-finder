@@ -1,9 +1,13 @@
+import os
 import requests
 from flight_data import FlightData
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
+
+load_dotenv()
 
 ENDPOINT = "https://api.tequila.kiwi.com"
-API_KEY = "mLIPH4WuB76OpG53SlVaGw2jnInTfXYB"
+API_KEY = os.environ.get("TEQUILA_API_KEY")
 
 header = {
     "apikey": API_KEY

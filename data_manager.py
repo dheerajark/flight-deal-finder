@@ -1,8 +1,12 @@
+import os
+from dotenv import load_dotenv
 import requests
 from pprint import pprint
 
+load_dotenv()
+
 ENDPOINT = "https://api.sheety.co/dbb7ea7b850e0a064b1a6371cb8f4533/copyOfFlightDeals"
-API_KEY = "Basic bGlnaHR4OmJlYXJlcio3"
+API_KEY = os.environ.get("SHEETY_API_KEY")
 header = {
     "Authorization": API_KEY
 }
